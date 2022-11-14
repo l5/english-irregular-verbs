@@ -36,5 +36,5 @@ Example download: [irregular_verb_exam_v23_blanks.pdf](doc/irregular_verb_exam_v
 
 ![](doc/irregular_verb_exam_random_blanks.png)
 
-Example download: [irregular_verb_exam_v23_blanks.pdf](doc/irregular_verb_exam_random_blanks.pdf)
+Example download: [irregular_verb_exam_random_blanks.pdf](doc/irregular_verb_exam_random_blanks.pdf)
 
