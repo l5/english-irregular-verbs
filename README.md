@@ -21,6 +21,7 @@
 1. Cdir into repo / scripts: `cd english-irregular-verbs/scripts`
 1. Create python venv: `python3 -m venv .venv`
 1. Activate venv: `. .venv/bin/activate` (or the Windows equivalent)
+1. Download dependencies: `python -m pip install -r requirements.txt`
 1. Modify python file settings (optional)
 1. Modify verb list in the `data` directory (optional)
 1. Run python script: `python create-exam-paper.py`
