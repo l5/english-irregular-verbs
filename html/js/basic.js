@@ -28,7 +28,7 @@ function makeTable() {
         //console.log(text);
         // Do stuff with the contents of the JSON file here
         const rows = text.slice(text.indexOf('\n') + 1).split('\n');
-        for (var i = 0; i < 2; i++) {//rows.length; i++) {
+        for (var i = 0; i < rows.length; i++) {
         //  console.log(rows[i])
           if (rows[i].length > 5) {
             vs = rows[i].split(',')
