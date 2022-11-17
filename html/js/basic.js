@@ -21,7 +21,7 @@ function demoLandscape() {
 function makeTable() {
     var url = '../data/verbs.csv';
     //var url = 'https://github.com/l5/english-irregular-verbs/raw/main/data/verbs.csv';
-    var body = [];
+    var rowsForms = [];
     fetch(url)
         .then(response => response.text())
         .then(text => {
@@ -32,18 +32,27 @@ function makeTable() {
         //  console.log(rows[i])
           if (rows[i].length > 5) {
             vs = rows[i].split(',')
-            body.push([vs[0], vs[1], vs[2]]);
-            // rowsForms = rowsForms.concat(vs);
+            // rowsForms.push([vs[0], vs[1], vs[2]]);
+            rowsForms = rowsForms.concat(vs);
           }
         //  console.log(rowsForms)
         }
     });
-    console.log("T1")/*
+    console.log("T1")
     console.log(rowsForms)
 
     
     rowsForms2 = rowsForms.sort(() => Math.random() - 0.5)
-    console.log(rowsForms2)*/
+    console.log(rowsForms2)
+
+    $('#mytable').html('');
+    myRow = '';
+    html = '';
+    for (var i = 0; i < body.length; i++) {
+      myRow = '<tr><td>' + body[i][0] + '</td><td>' + body[i][1] + '</td><td>' + body[i][2] + '</td></tr>'
+      html = html + myRow
+    }
+    $('#mytable').html(html)
 
     var doc = new jsPDF();
     var head = [['V1', 'V2', 'V3']]
@@ -52,18 +61,17 @@ function makeTable() {
       [2, 'Switzerland', 7.509, 'Bern'],
       [3, 'Iceland', 7.501, 'Reykjavík'],
     ]*/
-    /*
     var body = [
       ['fly', 'float', 'flitten'],
       ['nz', 'eu', 'uu'],
     ]
-    console.log(body)*/
-    //body = rowsForms;
+    console.log(body)
+    body = rowsForms;
     console.log(body)
     doc.autoTable({ head: head, body: body })
 
     // Simple html example
-    //doc.autoTable({ html: '#mytable' })
+    doc.autoTable({ html: '#mytable' })
 
     doc.save('table.pdf')
 }
