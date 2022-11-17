@@ -32,7 +32,8 @@ function makeTable() {
         //  console.log(rows[i])
           if (rows[i].length > 5) {
             vs = rows[i].split(',')
-            rowsForms.push([vs[0], vs[1], vs[2]]);
+            // rowsForms.push([vs[0], vs[1], vs[2]]);
+            rowsForms = rowsForms.concat(vs);
           }
         //  console.log(rowsForms)
         }
