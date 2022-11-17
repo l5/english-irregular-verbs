@@ -25,7 +25,7 @@ function makeTable() {
     fetch(url)
         .then(response => response.text())
         .then(text => {
-        console.log(text);
+        //console.log(text);
         // Do stuff with the contents of the JSON file here
         const rows = text.slice(text.indexOf('\n') + 1).split('\n');
         for (var i = 0; i < rows.length; i++) {
@@ -33,7 +33,7 @@ function makeTable() {
           console.log(rowsForms)
         }
     });
-
+    console.log("T1")
     
 
     var doc = new jsPDF();
