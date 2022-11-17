@@ -29,7 +29,8 @@ function makeTable() {
         // Do stuff with the contents of the JSON file here
         const rows = text.slice(text.indexOf('\n') + 1).split('\n');
         for (var i = 0; i < rows.length; i++) {
-          rowsForms.push(rows[i].split[',']);
+          console.log(rows[i])
+          rowsForms.push(rows[i].split(','));
           console.log(rowsForms)
         }
     });
