@@ -54,7 +54,7 @@ function makeTable() {
       ['fly', 'float', 'flitten'],
       ['nz', 'eu', 'uu'],
     ]
-    doc.autoTable({ head: head, body: rowsForms })
+    doc.autoTable({ head: head, body: body })
 
     // Simple html example
     //doc.autoTable({ html: '#mytable' })
