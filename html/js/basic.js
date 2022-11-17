@@ -30,7 +30,9 @@ function makeTable() {
         const rows = text.slice(text.indexOf('\n') + 1).split('\n');
         for (var i = 0; i < rows.length; i++) {
         //  console.log(rows[i])
+          if (rows[i].length > 5) {
           rowsForms.push(rows[i].split(','));
+          }
         //  console.log(rowsForms)
         }
     });
@@ -38,8 +40,8 @@ function makeTable() {
     console.log(rowsForms)
 
     
-    rowsForms = rowsForms.sort(() => Math.random() - 0.5)
-    console.log(rowsForms)
+    rowsForms2 = rowsForms.sort(() => Math.random() - 0.5)
+    console.log(rowsForms2)
 
     var doc = new jsPDF();
     var head = [['V1', 'V2', 'V3']]
@@ -51,7 +53,7 @@ function makeTable() {
     doc.autoTable({ head: head, body: rowsForms })
 
     // Simple html example
-    // doc.autoTable({ html: '#mytable' })
+    //doc.autoTable({ html: '#mytable' })
 
     doc.save('table.pdf')
 }
