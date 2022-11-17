@@ -38,12 +38,12 @@ function makeTable() {
         //  console.log(rowsForms)
         }
     });
-    console.log("T1")
+    console.log("T1")/*
     console.log(rowsForms)
 
     
     rowsForms2 = rowsForms.sort(() => Math.random() - 0.5)
-    console.log(rowsForms2)
+    console.log(rowsForms2)*/
 
     var doc = new jsPDF();
     var head = [['V1', 'V2', 'V3']]
