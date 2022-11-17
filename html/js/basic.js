@@ -37,6 +37,9 @@ function makeTable() {
     console.log("T1")
     console.log(rowsForms)
 
+    
+    rowsForms = rowsForms.sort(() => Math.random() - 0.5)
+
     var doc = new jsPDF();
     var head = [['V1', 'V2', 'V3']]
     /*var body = [
