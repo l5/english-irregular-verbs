@@ -35,10 +35,10 @@ function generateExamPaper() {
           body = rowsForms;
           doc.autoTable({ head: head, body: rowsForms })
           fileName = 'irregular-verb-exam-paper.pdf';
-          if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
+          //if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
             window.open(doc.output('bloburl', { filename: fileName }))
-          } else {
-            doc.save(fileName)
-          }
+          //} else {
+          //  doc.save(fileName)
+          //}
         });
 }
