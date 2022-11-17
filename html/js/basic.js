@@ -18,7 +18,7 @@ function demoLandscape() {
   doc.save("Test.pdf");
 }
 
-function makeTable() {
+function generateExamPaper() {
     var url = '../data/verbs.csv';
     //var url = 'https://github.com/l5/english-irregular-verbs/raw/main/data/verbs.csv';
     var rowsForms = [];
