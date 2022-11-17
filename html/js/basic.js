@@ -28,23 +28,23 @@ function makeTable() {
         //console.log(text);
         // Do stuff with the contents of the JSON file here
         const rows = text.slice(text.indexOf('\n') + 1).split('\n');
-        for (var i = 0; i < rows.length; i++) {
-          console.log(rows[i])
+        //for (var i = 0; i < rows.length; i++) {
+        //  console.log(rows[i])
           rowsForms.push(rows[i].split(','));
-          console.log(rowsForms)
-        }
+        //  console.log(rowsForms)
+        //}
     });
     console.log("T1")
-    
+    console.log(rowsForms)
 
     var doc = new jsPDF();
-    var head = [['ID', 'Country', 'Rank', 'Capital']]
-    var body = [
+    var head = [['V1', 'V2', 'V3']]
+    /*var body = [
       [1, 'Denmark', 7.526, 'Copenhagen'],
       [2, 'Switzerland', 7.509, 'Bern'],
       [3, 'Iceland', 7.501, 'Reykjavík'],
-    ]
-    doc.autoTable({ head: head, body: body })
+    ]*/
+    doc.autoTable({ head: head, body: rowsForms })
 
     // Simple html example
     doc.autoTable({ html: '#mytable' })
