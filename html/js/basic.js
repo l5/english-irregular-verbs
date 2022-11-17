@@ -37,14 +37,14 @@ function makeTable() {
           }
         //  console.log(rowsForms)
         }
-    });
+    
     console.log("T1")
     console.log(rowsForms)
 
     
     rowsForms2 = rowsForms.sort(() => Math.random() - 0.5)
     console.log(rowsForms2)
-
+/*
     $('#mytable').html('');
     myRow = '';
     html = '';
@@ -53,7 +53,7 @@ function makeTable() {
       html = html + myRow
     }
     $('#mytable').html(html)
-
+*/
     var doc = new jsPDF();
     var head = [['V1', 'V2', 'V3']]
     /*var body = [
@@ -68,12 +68,13 @@ function makeTable() {
     console.log(body)
     body = rowsForms;
     console.log(body)
-    doc.autoTable({ head: head, body: body })
+    doc.autoTable({ head: head, body: rowsForms })
 
     // Simple html example
-    doc.autoTable({ html: '#mytable' })
+    //doc.autoTable({ html: '#mytable' })
 
     doc.save('table.pdf')
+  });
 }
 
 function demoFontSizes() {
