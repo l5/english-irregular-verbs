@@ -21,12 +21,19 @@ function demoLandscape() {
 function makeTable() {
     var url = '../data/verbs.csv';
     //var url = 'https://github.com/l5/english-irregular-verbs/raw/main/data/verbs.csv';
+    var rowsForms = [];
     fetch(url)
         .then(response => response.text())
         .then(text => {
         console.log(text);
         // Do stuff with the contents of the JSON file here
+        const rows = text.slice(text.indexOf('\n') + 1).split('\n');
+        for (var i = 0; i < rows.length; i++) {
+          rowsForms.push(rows[i].split[',']);
+        }
     });
+
+    
 
     var doc = new jsPDF();
     var head = [['ID', 'Country', 'Rank', 'Capital']]
