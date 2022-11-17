@@ -56,7 +56,7 @@ function makeTable() {
       ['nz', 'eu', 'uu'],
     ]
     console.log(body)
-    body = rowsForms2;
+    body = rowsForms;
     console.log(body)
     doc.autoTable({ head: head, body: body })
 
