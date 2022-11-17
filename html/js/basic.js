@@ -50,6 +50,10 @@ function makeTable() {
       [2, 'Switzerland', 7.509, 'Bern'],
       [3, 'Iceland', 7.501, 'Reykjavík'],
     ]*/
+    var body = [
+      ['fly', 'float', 'flitten'],
+      ['nz', 'eu', 'uu'],
+    ]
     doc.autoTable({ head: head, body: rowsForms })
 
     // Simple html example
