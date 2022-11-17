@@ -48,8 +48,8 @@ function makeTable() {
     $('#mytable').html('');
     myRow = '';
     html = '';
-    for (var i = 0; i < body.length; i++) {
-      myRow = '<tr><td>' + body[i][0] + '</td><td>' + body[i][1] + '</td><td>' + body[i][2] + '</td></tr>'
+    for (var i = 0; i < rowsForms.length; i++) {
+      myRow = '<tr><td>' + rowsForms[i][0] + '</td><td>' + rowsForms[i][1] + '</td><td>' + rowsForms[i][2] + '</td></tr>'
       html = html + myRow
     }
     $('#mytable').html(html)
