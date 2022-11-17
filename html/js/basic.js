@@ -30,6 +30,7 @@ function makeTable() {
         const rows = text.slice(text.indexOf('\n') + 1).split('\n');
         for (var i = 0; i < rows.length; i++) {
           rowsForms.push(rows[i].split[',']);
+          console.log(rowsForms)
         }
     });
 
