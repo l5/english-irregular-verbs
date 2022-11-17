@@ -32,10 +32,13 @@ function generateExamPaper() {
             ['fly', 'float', 'flitten'],
             ['nz', 'eu', 'uu'],
           ]
-          console.log(body)
           body = rowsForms;
-          console.log(body)
           doc.autoTable({ head: head, body: rowsForms })
-          doc.save('irregular-verb-exam-paper.pdf')
+          fileName = 'irregular-verb-exam-paper.pdf';
+          if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
+            window.open(doc.output('bloburl', { filename: fileName }))
+          } else {
+            doc.save(fileName)
+          }
         });
 }
