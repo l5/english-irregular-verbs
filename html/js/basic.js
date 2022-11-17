@@ -31,7 +31,8 @@ function makeTable() {
         for (var i = 0; i < 2; i++) {//rows.length; i++) {
         //  console.log(rows[i])
           if (rows[i].length > 5) {
-          rowsForms.push(rows[i].split(','));
+            vs = rows[i].split(',')
+            rowsForms.push([vs[0], vs[1], vs[2]]);
           }
         //  console.log(rowsForms)
         }
