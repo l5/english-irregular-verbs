@@ -39,6 +39,7 @@ function makeTable() {
 
     
     rowsForms = rowsForms.sort(() => Math.random() - 0.5)
+    console.log(rowsForms)
 
     var doc = new jsPDF();
     var head = [['V1', 'V2', 'V3']]
@@ -50,7 +51,7 @@ function makeTable() {
     doc.autoTable({ head: head, body: rowsForms })
 
     // Simple html example
-    doc.autoTable({ html: '#mytable' })
+    // doc.autoTable({ html: '#mytable' })
 
     doc.save('table.pdf')
 }
