@@ -44,16 +44,20 @@ function makeTable() {
     
     rowsForms2 = rowsForms.sort(() => Math.random() - 0.5)
     console.log(rowsForms2)
-/*
-    $('#mytable').html('');
-    myRow = '';
-    html = '';
+    const BLNK = '__________________'
     for (var i = 0; i < rowsForms.length; i++) {
-      myRow = '<tr><td>' + rowsForms[i][0] + '</td><td>' + rowsForms[i][1] + '</td><td>' + rowsForms[i][2] + '</td></tr>'
-      html = html + myRow
+      var rnd = Math.floor(Math.random() * 3);
+      if (rnd == 0) {
+        rowsForms[i][1] = BLNK
+        rowsForms[i][2] = BLNK
+      } else if (rnd == 1) {
+        rowsForms[i][1] = BLNK
+        rowsForms[i][3] = BLNK
+      } else {
+        rowsForms[i][2] = BLNK
+        rowsForms[i][3] = BLNK
+      }
     }
-    $('#mytable').html(html)
-*/
     var doc = new jsPDF();
     var head = [['V1', 'V2', 'V3']]
     /*var body = [
