@@ -48,14 +48,14 @@ function makeTable() {
     for (var i = 0; i < rowsForms.length; i++) {
       var rnd = Math.floor(Math.random() * 3);
       if (rnd == 0) {
+        rowsForms[i][0] = BLNK
         rowsForms[i][1] = BLNK
-        rowsForms[i][2] = BLNK
       } else if (rnd == 1) {
         rowsForms[i][1] = BLNK
-        rowsForms[i][3] = BLNK
-      } else {
         rowsForms[i][2] = BLNK
-        rowsForms[i][3] = BLNK
+      } else {
+        rowsForms[i][0] = BLNK
+        rowsForms[i][2] = BLNK
       }
     }
     var doc = new jsPDF();
