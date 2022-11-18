@@ -1,8 +1,12 @@
 # english-irregular-verbs
 
-## Online Generator for English irregular verbs
+## Online PDF Generator for English irregular verbs
 
 See here: https://l5.github.io/english-irregular-verbs/html/exam-paper-generator.html
+
+## Online Test for English irregular verbs
+
+See here: https://l5.github.io/english-irregular-verbs/html/online-exam.html
 
 ## Script to generate PDF exam paper to test knowledge of English irregular verbs
 
