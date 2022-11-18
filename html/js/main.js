@@ -1,5 +1,5 @@
 function generateExamPaper() {
-    var url = '../data/verbs.csv';
+    var url = '../data/verbs.csv?v=2';
     var rowsForms = [];
     fetch(url)
         .then(response => response.text())
@@ -38,7 +38,7 @@ function generateExamPaper() {
 
 
 function generateExamPage() {
-  var url = '../data/verbs.csv';
+  var url = '../data/verbs.csv?v=2';
   var rowsForms = [];
   fetch(url)
       .then(response => response.text())
