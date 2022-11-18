@@ -47,6 +47,11 @@ function generateExamPage() {
   fetch(url)
       .then(response => response.text())
       .then(text => {
+        testMode = "check23";
+        if ($('#el').is(':checked')) {
+          testMode = "check123";
+        }
+        const BLNK = '<input class="verbform" />';
         const rows = text.slice(text.indexOf('\n') + 1).split('\n');
         for (var i = 0; i < rows.length; i++) {
           if (rows[i].length > 5) {
@@ -64,8 +69,27 @@ function generateExamPage() {
         
         var myHtml = '<table id="testtable">';
         for (var i = 0; i < rowsForms.length; i++) {
-          myHtml += '<tr><td>' + rowsForms[i][0] + '</td><td data-correct="' + rowsForms[i][1] + '"><input class="verbform" /></td>';
-          myHtml += '<td data-correct="' + rowsForms[i][2] + '"><input class="verbform" /></td></tr>';
+          if (testMode == "check23") {
+            myHtml += '<tr><td data-correct="' + rowsForms[i][0] + '">' + rowsForms[i][0] + '</td><td data-correct="' + rowsForms[i][1] + '">' + BLNK + '</td>';
+            myHtml += '<td data-correct="' + rowsForms[i][2] + '">' + BLNK + '</td></tr>';
+          } else {
+            var rnd = Math.floor(Math.random() * 3);
+            if (rnd == 0) {
+              rf1 = BLNK
+              rf2 = BLNK
+              rf3 = rowsForms[i][2]
+            } else if (rnd == 1) {
+              rf1 = rowsForms[i][0]
+              rf2 = BLNK
+              rf3 = BLNK
+            } else {
+              rf1 = BLNK
+              rf2 = rowsForms[i][1]
+              rf3 = BLNK
+            }
+            myHtml += '<tr><td data-correct="' + rowsForms[i][0] + '">' + rf1 + '</td><td data-correct="' + rowsForms[i][1] + '">' + rf2 + '</td>';
+            myHtml += '<td data-correct="' + rowsForms[i][2] + '">' + rf3 + '</td></tr>';
+          }
         }
         myHtml += '</table>';
         $('#exampaper').html(myHtml);
