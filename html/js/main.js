@@ -65,7 +65,7 @@ function generateExamPage() {
         var myHtml = '<table id="testtable">';
         for (var i = 0; i < rowsForms.length; i++) {
           myHtml += '<tr><td>' + rowsForms[i][0] + '</td><td data-correct="' + rowsForms[i][1] + '"><input class="verbform" /></td>';
-          myHtml += '<td data-correct="' + rowsForms[i][2] + '"><input /></td></tr>';
+          myHtml += '<td data-correct="' + rowsForms[i][2] + '"><input class="verbform" /></td></tr>';
         }
         myHtml += '</table>';
         $('#exampaper').html(myHtml);
