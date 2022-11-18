@@ -48,7 +48,7 @@ function generateExamPage() {
       .then(response => response.text())
       .then(text => {
         testMode = "check23";
-        if ($('#el').is(':checked')) {
+        if ($('#toggle12formblank').is(':checked')) {
           testMode = "check123";
         }
         const BLNK = '<input class="verbform" />';
