@@ -1,4 +1,5 @@
 f1,f2,f3
+abide,abided/abode,abided/abode
 arise,arose,arisen
 awake,awaked/awoke,awoken
 be,was/were,been
@@ -69,7 +70,7 @@ give,gave,given
 go,went,gone
 grind,ground,ground
 grow,grew,grown
-hang,hung,hung
+hang,hanged/hung,hanged/hung
 have,had,had
 hear,heard,heard
 hide,hid,hidden
@@ -81,9 +82,9 @@ kneel,knelt,knelt
 know,knew,known
 lay,laid,laid
 lead,led,led
-lean,leant,leant
+lean,leaned/leant,leaned/leant
 leap,leapt,leapt
-learn,learnt,learnt
+learn,learned/learnt,learned/learnt
 leave,left,left
 lend,lent,lent
 let,let,let
@@ -113,7 +114,7 @@ set,set,set
 shake,shook,shaken
 shed,shed,shed
 shine,shone,shone
-shit,shit,shit
+shit,shit/shat,shit/shat
 shoot,shot,shot
 show,showed,shown
 shrink,shrank,shrunk
@@ -159,7 +160,7 @@ tell,told,told
 think,thought,thought
 throw,threw,thrown
 thrust,thrust,thrust
-tread,trod,trodden
+tread,treaded/trod,trodden
 understand,understood,understood
 undertake,undertook,undertaken
 undo,undid,undone
