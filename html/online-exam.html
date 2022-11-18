@@ -3,14 +3,8 @@
 
 <head>
   <title>Irregular Verbs Online Exam</title>
-
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-
-  <script
-			  src="https://code.jquery.com/jquery-3.6.1.min.js"
-			  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-			  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -24,6 +18,22 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">English Irregular Verb Trainer</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="https://l5.github.io/english-irregular-verbs/html/exam-paper-generator.html">PDF Test Generator</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="https://l5.github.io/english-irregular-verbs/html/online-exam.html">Online Test</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
   <h1>English Irregular Verbs Online Exam</h1>
   <input id="toggle12formblank" type="checkbox" /> Test for 1st and 2nd form as well<br /> 
   <a href="javascript:generateExamPage()" class="btn btn-primary" role="button">Generate fresh Exam Paper</a>
