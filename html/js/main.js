@@ -55,20 +55,6 @@ function generateExamPage() {
           }
         }    
         rowsForms2 = rowsForms.sort(() => Math.random() - 0.5)
-        const BLNK = '__________________'
-        for (var i = 0; i < rowsForms.length; i++) {
-          var rnd = Math.floor(Math.random() * 3);
-          if (rnd == 0) {
-            rowsForms[i][0] = BLNK
-            rowsForms[i][1] = BLNK
-          } else if (rnd == 1) {
-            rowsForms[i][1] = BLNK
-            rowsForms[i][2] = BLNK
-          } else {
-            rowsForms[i][0] = BLNK
-            rowsForms[i][2] = BLNK
-          }
-        }
         var doc = new jsPDF();
         var head = [['V1', 'V2', 'V3']]
         var body = [
@@ -88,7 +74,7 @@ function generateExamPage() {
 
 function checkExamPage() {
   $('input.verbform').each(function(index){
-    correctForm = $(this).parent().getAttr('data-correct');
+    correctForm = $(this).parent().data('correct');
     if ($(this).val() != correctForm) {
       $(this).addClass('check-wrong');
       $(this).removeClass('check-right');
