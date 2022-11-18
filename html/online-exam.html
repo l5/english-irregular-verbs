@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Irregular Verbs Exam Paper Generator</title>
+  <title>Irregular Verbs Online Exam</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -17,17 +17,26 @@
   <script type="text/javascript" src="https://unpkg.com/jspdf-autotable@3.5.25/dist/jspdf.plugin.autotable.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+  <link rel="stylesheet" href="style.css" />
   <script>
     window.jsPDF = window.jspdf.jsPDF;    
   </script>
 </head>
 
 <body>
-  <h1>English Irregular Verbs Exam Generator II</h1>
-  <p>Every click on the button below creates a new, free, fresh exam paper to test the knowledge of irregular verbs.</p>
-  <a href="javascript:generateExamPaper()" class="btn btn-primary" role="button">Generate fresh Exam Paper</a>
-	
-  <p><strong>Note:</strong> This generator may not work on iOS devices; please use either an Android device, or a desktop device to generate exam papers. Thank you!</p>
+  <h1>English Irregular Verbs Online Exam</h1>
+  <input id="toggle12formblank" type="checkbox" /> Test for 1st and 2nd form as well<br /> 
+  <a href="javascript:generateExamPage()" class="btn btn-primary" role="button">Generate fresh Exam Paper</a>
+  <a href="javascript:checkExamPage()" class="btn btn-warning" role="button">Check Results</a>
+
+  <div class="result"></div>
+
+
+  <div id="exampaper">
+
+  </div>
+  <a href="javascript:checkExamPage()" class="btn btn-warning" role="button">Check Results</a>
+  <div class="result"></div>
   <a class="github-fork-ribbon" href="https://github.com/l5/english-irregular-verbs" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 </body>
 </html>
