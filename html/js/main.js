@@ -28,10 +28,6 @@ function generateExamPaper() {
           }
           var doc = new jsPDF();
           var head = [['V1', 'V2', 'V3']]
-          var body = [
-            ['fly', 'float', 'flitten'],
-            ['nz', 'eu', 'uu'],
-          ]
           body = rowsForms;
           doc.autoTable({ head: head, body: rowsForms })
           fileName = 'irregular-verb-exam-paper.pdf';
@@ -60,12 +56,6 @@ function generateExamPage() {
           }
         }    
         rowsForms2 = rowsForms.sort(() => Math.random() - 0.5)
-        var doc = new jsPDF();
-        var head = [['V1', 'V2', 'V3']]
-        var body = [
-          ['fly', 'float', 'flitten'],
-          ['nz', 'eu', 'uu'],
-        ]
         
         var myHtml = '<table id="testtable">';
         for (var i = 0; i < rowsForms.length; i++) {
