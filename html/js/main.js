@@ -73,14 +73,37 @@ function generateExamPage() {
 }
 
 function checkExamPage() {
+  goodOnes = 0;
+  badOnes = 0;
+    
   $('input.verbform').each(function(index){
     correctForm = $(this).parent().data('correct');
     if ($(this).val() != correctForm) {
       $(this).addClass('check-wrong');
       $(this).removeClass('check-right');
+      badOnes += 1;
     } else {
       $(this).addClass('check-right');
       $(this).removeClass('check-wrong');
+      goodOnes += 1;
     }
   })
+
+  $('.result').html('Correct: ' + goodOnes.toString() + ' / Wrong: ' + badOnes.toString());
+  $('.result').removeClass('resultBad');
+  $('.result').removeClass('resultGood');
+  
+  if (badOnes > 0) {
+    $('.result').addClass('resultBad');
+  } else {
+    $('.result').addClass('resultGood');
+  }
 }
+
+$('input.verbform').on("click", function() {
+  $(this).removeClass('check-right');
+  $(this).removeClass('check-right');
+  $('.result').removeClass('resultBad');
+  $('.result').removeClass('resultGood');
+  $('.result').html('');
+});
