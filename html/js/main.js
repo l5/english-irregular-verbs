@@ -1,5 +1,5 @@
 function generateExamPaper() {
-    var url = '../data/verbs.csv?v=2';
+    var url = '../data/verbs.csv';
     var rowsForms = [];
     fetch(url)
         .then(response => response.text())
@@ -38,7 +38,7 @@ function generateExamPaper() {
 
 
 function generateExamPage() {
-  var url = '../data/verbs.csv?v=2';
+  var url = '../data/verbs.csv';
   var rowsForms = [];
   fetch(url)
       .then(response => response.text())
@@ -92,7 +92,7 @@ function checkExamPage() {
     
   $('input.verbform').each(function(index){
     correctForm = $(this).parent().data('correct');
-    if ($(this).val() != correctForm) {
+    if ($(this).val().trim() != correctForm) {
       $(this).addClass('check-wrong');
       $(this).removeClass('check-right');
       badOnes += 1;
