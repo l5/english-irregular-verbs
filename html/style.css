@@ -18,3 +18,13 @@
     font-weight: bold;
     font-size: large;
 }
+
+input.verbform {
+    background: transparent;
+    border-style: none;
+    border-bottom-style: solid;
+}
+
+#testtable tr:hover {
+    background-color: #cccccc;
+}
