@@ -114,7 +114,7 @@ function checkExamPage() {
   }
 }
 
-$('input.verbform').on("click", function(el) {
+$('body').on("click", "input.verbform", function(el) {
   $(this).removeClass('check-right');
   $(this).removeClass('check-wrong');
   $('.result').removeClass('resultBad');
