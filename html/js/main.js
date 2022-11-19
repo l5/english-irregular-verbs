@@ -114,9 +114,11 @@ function checkExamPage() {
   }
 }
 
-$('body').on("click", "input.verbform", function(el) {
-  $(this).removeClass('check-right');
-  $(this).removeClass('check-wrong');
-  $('.result').removeClass('resultBad');
-  $('.result').removeClass('resultGood');
-});
+$(document).ready(function() {
+  $(document).on("click", "input.verbform", function(el) {
+    $(this).removeClass('check-right');
+    $(this).removeClass('check-wrong');
+    $('.result').removeClass('resultBad');
+    $('.result').removeClass('resultGood');
+  });
+})
