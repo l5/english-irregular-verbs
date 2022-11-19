@@ -5,11 +5,11 @@ input.verbform {
 }
 
 input.verbform.check-wrong {
-    border: 1px solid #cc0000;
+    border-bottom: 1px solid #cc0000;
     background: #ffcccc;
 }
 input.verbform.check-right {
-    border: 1px solid #00aa00;
+    border-bottom: 1px solid #00aa00;
     background: #ccffcc;
 }
 
