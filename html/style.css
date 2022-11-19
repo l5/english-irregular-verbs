@@ -1,3 +1,9 @@
+input.verbform {
+    background: transparent;
+    border-style: none;
+    border-bottom-style: solid;
+}
+
 input.verbform.check-wrong {
     border: 1px solid #cc0000;
     background: #ffcccc;
@@ -17,12 +23,6 @@ input.verbform.check-right {
 .result {
     font-weight: bold;
     font-size: large;
-}
-
-input.verbform {
-    background: transparent;
-    border-style: none;
-    border-bottom-style: solid;
 }
 
 #testtable tr:hover {
