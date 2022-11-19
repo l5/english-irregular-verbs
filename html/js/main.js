@@ -114,10 +114,9 @@ function checkExamPage() {
   }
 }
 
-$('input.verbform').on("click", function() {
+$('input.verbform').on("click", function(el) {
   $(this).removeClass('check-right');
-  $(this).removeClass('check-right');
+  $(this).removeClass('check-wrong');
   $('.result').removeClass('resultBad');
   $('.result').removeClass('resultGood');
-  $('.result').html('');
 });
